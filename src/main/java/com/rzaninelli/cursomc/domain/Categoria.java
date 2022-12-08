@@ -1,5 +1,6 @@
 package com.rzaninelli.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
@@ -15,6 +16,7 @@ public class Categoria implements Serializable {
     private Integer id;
     private String nome;
 
+    @JsonManagedReference //usa essa anotação no lado que deve vir as outras referencias
     @ManyToMany(mappedBy = "categorias") //indica que o mapeamento foi feito na outra classe pelo atributo categorias
     private List<Produto> produtos = new ArrayList<>();
 
