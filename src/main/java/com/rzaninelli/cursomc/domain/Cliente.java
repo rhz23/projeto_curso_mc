@@ -1,5 +1,6 @@
 package com.rzaninelli.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.rzaninelli.cursomc.domain.enums.TipoCliente;
 import jakarta.persistence.*;
 
@@ -17,6 +18,7 @@ public class Cliente implements Serializable {
     private String cpfOuCnpj;
     private Integer tipo;
 
+    @JsonManagedReference
     @OneToMany(mappedBy = "cliente")
     private List<Endereco> enderecos = new ArrayList<>();
 
