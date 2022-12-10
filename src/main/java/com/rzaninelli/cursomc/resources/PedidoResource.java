@@ -1,8 +1,6 @@
 package com.rzaninelli.cursomc.resources;
 
-import com.rzaninelli.cursomc.domain.Categoria;
 import com.rzaninelli.cursomc.domain.Pedido;
-import com.rzaninelli.cursomc.services.CategoriaService;
 import com.rzaninelli.cursomc.services.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

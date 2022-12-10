@@ -1,8 +1,6 @@
 package com.rzaninelli.cursomc.services;
 
-import com.rzaninelli.cursomc.domain.Categoria;
 import com.rzaninelli.cursomc.domain.Pedido;
-import com.rzaninelli.cursomc.repositories.CategoriaRepository;
 import com.rzaninelli.cursomc.repositories.PedidoRepository;
 import com.rzaninelli.cursomc.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;

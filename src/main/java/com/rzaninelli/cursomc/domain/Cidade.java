@@ -1,8 +1,6 @@
 package com.rzaninelli.cursomc.domain;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
-
 
 import java.io.Serializable;
 import java.util.Objects;

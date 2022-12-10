@@ -1,6 +1,7 @@
 package com.rzaninelli.cursomc.services;
 
 import com.rzaninelli.cursomc.domain.Categoria;
+import com.rzaninelli.cursomc.dto.CategoriaDTO;
 import com.rzaninelli.cursomc.repositories.CategoriaRepository;
 import com.rzaninelli.cursomc.services.exceptions.DataIntegrityException;
 import com.rzaninelli.cursomc.services.exceptions.ObjectNotFoundException;
@@ -53,5 +54,9 @@ public class CategoriaService {
     public Page<Categoria> findPage(Integer page, Integer linesPerPage, String orderBy, String direction){
         PageRequest pageRequest = PageRequest.of(page, linesPerPage, Sort.Direction.valueOf(direction), orderBy);
         return categoriaRepository.findAll(pageRequest);
+    }
+
+    public Categoria fromDTO(CategoriaDTO objDTO){
+        return new Categoria(objDTO.getId(), objDTO.getNome());
     }
 }
