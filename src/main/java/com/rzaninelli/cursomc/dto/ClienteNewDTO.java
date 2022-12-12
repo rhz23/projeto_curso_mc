@@ -1,7 +1,6 @@
 package com.rzaninelli.cursomc.dto;
 
 import com.rzaninelli.cursomc.services.validation.ClienteInsert;
-import com.rzaninelli.cursomc.services.validation.CpfOrCnpjValidator;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import org.hibernate.validator.constraints.Length;

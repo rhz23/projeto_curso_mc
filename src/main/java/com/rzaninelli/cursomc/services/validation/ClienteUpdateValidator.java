@@ -1,12 +1,9 @@
 package com.rzaninelli.cursomc.services.validation;
 
 import com.rzaninelli.cursomc.domain.Cliente;
-import com.rzaninelli.cursomc.domain.enums.TipoCliente;
 import com.rzaninelli.cursomc.dto.ClienteDTO;
-import com.rzaninelli.cursomc.dto.ClienteNewDTO;
 import com.rzaninelli.cursomc.repositories.ClienteRepository;
 import com.rzaninelli.cursomc.resources.exceptions.FieldMessage;
-import com.rzaninelli.cursomc.services.validation.utils.BR;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
