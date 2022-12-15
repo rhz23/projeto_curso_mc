@@ -1,6 +1,5 @@
 package com.rzaninelli.cursomc.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
@@ -16,7 +15,7 @@ public class Produto implements Serializable {
     private String nome;
     private Double preco;
 
-    @JsonBackReference
+    @JsonIgnore
     @ManyToMany
     @JoinTable(name = "produto_categoria", //criar tabela extra do relacionamento muitos-para-muitos
             joinColumns = @JoinColumn(name = "produto_id"), //chave estrangeira da outra classe

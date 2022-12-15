@@ -1,9 +1,11 @@
 package com.rzaninelli.cursomc.domain;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.rzaninelli.cursomc.domain.enums.EstadoPagamento;
 import jakarta.persistence.Entity;
 
 @Entity
+@JsonTypeName("pagamentoComCartao")
 public class PagamentoComCartao extends Pagamento{
 
     private Integer numeroDeParcelas;

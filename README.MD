@@ -1,0 +1,1 @@
+- Projeto Curso SpringBoot, Hibernate, REST, IONIC, JWT, S3, MySQL, MongoDB
