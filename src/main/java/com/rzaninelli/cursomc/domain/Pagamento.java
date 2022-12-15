@@ -56,6 +56,10 @@ public abstract class Pagamento implements Serializable {
         this.pedido = pedido;
     }
 
+    public String getDescricao(){
+        return EstadoPagamento.toEnum(this.getEstado()).getDescricao();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
