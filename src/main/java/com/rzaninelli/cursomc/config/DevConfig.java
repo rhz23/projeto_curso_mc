@@ -1,6 +1,9 @@
 package com.rzaninelli.cursomc.config;
 
 import com.rzaninelli.cursomc.services.DBService;
+import com.rzaninelli.cursomc.services.EmailService;
+import com.rzaninelli.cursomc.services.MockMailService;
+import com.rzaninelli.cursomc.services.SmtpEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -29,5 +32,10 @@ public class DevConfig {
         dbService.instantiateTestDatabase();
 
         return true;
+    }
+
+    @Bean
+    public EmailService emailService() {
+        return new SmtpEmailService();
     }
 }
